@@ -44,6 +44,27 @@ public class defination {
 		   //driver.findElement(By.xpath("//*[@id='welcome-menu']/ul/li[3]")).click();
 		   System.out.println("I am logged out");
 	}
+	@When("Enter invalid user name {string}")
+	public void enter_invalid_user_name(String name) {
+		  driver.findElement(By.id("txtUsername")).sendKeys(name);
+	}
 
+
+
+
+	@When("Enter invalid password {string}")
+	public void enter_invalid_password(String pwd) {
+		 driver.findElement(By.id("txtPassword")).sendKeys(pwd);
+	}
+	@Then("Login should see the invalid credentials {string}")
+	public void login_should_see_the_invalid_credentials(String Loginname) {
+		 String actual =driver.findElement(By.id("spanMessage")).getText();
+		   String expected = Loginname;
+		   Assert.assertEquals(expected, actual);
+		  // driver.findElement(By.id("welcome")).click();
+		   //driver.findElement(By.xpath("//*[@id='welcome-menu']/ul/li[3]")).click();
+		   System.out.println("I am logged out");
+		   driver.quit();
+	}
 
 }

@@ -11,6 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features= {"src\\test\\resources\\Login"},
 glue= {"stepdefination"},
 monochrome =true,
+dryRun=false,
+strict =true,
 plugin = {"html:testoutput/cucumber.html","junit:testoutput/cucumber.xml","json:testoutput/cucumber.json"}
 // to make a console output in better format we are using monochrome
 		)
