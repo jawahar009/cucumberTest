@@ -42,7 +42,7 @@ public class defination {
 		   Assert.assertEquals(expected, actual);
 		  // driver.findElement(By.id("welcome")).click();
 		   //driver.findElement(By.xpath("//*[@id='welcome-menu']/ul/li[3]")).click();
-		   System.out.println("I am logged out of user");
+		   System.out.println("I am logged out of user one");
 	}
 	@When("Enter invalid user name {string}")
 	public void enter_invalid_user_name(String name) {
